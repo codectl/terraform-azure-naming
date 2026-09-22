@@ -1,15 +1,29 @@
 resource "random_string" "main" {
-  length  = 60
-  special = false
-  upper   = false
-  numeric = var.unique-include-numbers
+  length           = 60
+  special          = false
+  upper            = false
+  lower            = true
+  numeric          = var.unique-include-numbers
+  min_lower        = 0
+  min_upper        = 0
+  min_numeric      = 0
+  min_special      = 0
+  override_special = null
+  keepers          = var.unique-keepers
 }
 
 resource "random_string" "first_letter" {
-  length  = 1
-  special = false
-  upper   = false
-  numeric = false
+  length           = 1
+  special          = false
+  upper            = false
+  lower            = true
+  numeric          = false
+  min_lower        = 1
+  min_upper        = 0
+  min_numeric      = 0
+  min_special      = 0
+  override_special = null
+  keepers          = var.unique-keepers
 }
 
 locals {

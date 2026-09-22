@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (3.8.1)
+- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
 
 ## Resources
 
@@ -65,6 +65,14 @@ Description: If you want to include numbers in the unique generation
 Type: `bool`
 
 Default: `true`
+
+### <a name="input_unique-keepers"></a> [unique-keepers](#input\_unique-keepers)
+
+Description: Arbitrary map of values that, when changed, triggers regeneration of the unique suffix
+
+Type: `map(string)`
+
+Default: `{}`
 
 ### <a name="input_unique-length"></a> [unique-length](#input\_unique-length)
 
@@ -1762,21 +1770,3 @@ For more information, please see our testing [guidelines](./TESTING.md)
 ## Notes
 
 Full examples detailing all usages, along with integrations with dependency modules, are located in the examples directory
-
-## Contributors
-
-We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
-
-For more information, please see our contribution [guidelines](./CONTRIBUTING.md). <br><br>
-
-<a href="https://github.com/cloudnationhq/terraform-azure-naming/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cloudnationhq/terraform-azure-naming" />
-</a>
-
-## License
-
-MIT Licensed. See [LICENSE](./LICENSE) for full details.
-
-## References
-
-- [Documentation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)

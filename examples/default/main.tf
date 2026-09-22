@@ -1,17 +1,17 @@
 module "naming" {
-  source  = "cloudnationhq/naming/azure"
+  source  = "codectl/naming/azure"
   version = "~> 0.24"
 }
 
 module "naming_with_suffix" {
-  source  = "cloudnationhq/naming/azure"
+  source  = "codectl/naming/azure"
   version = "~> 0.24"
 
   suffix = ["dev", "001"]
 }
 
 module "naming_with_prefix_suffix" {
-  source  = "cloudnationhq/naming/azure"
+  source  = "codectl/naming/azure"
   version = "~> 0.24"
 
   prefix = ["myorg"]
@@ -19,7 +19,7 @@ module "naming_with_prefix_suffix" {
 }
 
 module "naming_custom_seed" {
-  source  = "cloudnationhq/naming/azure"
+  source  = "codectl/naming/azure"
   version = "~> 0.24"
 
   suffix                 = ["test"]

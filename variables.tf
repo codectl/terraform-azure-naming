@@ -27,3 +27,9 @@ variable "unique-include-numbers" {
   type        = bool
   default     = true
 }
+
+variable "unique-keepers" {
+  description = "Arbitrary map of values that, when changed, triggers regeneration of the unique suffix"
+  type        = map(string)
+  default     = {}
+}
